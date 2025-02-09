@@ -1,55 +1,97 @@
 .create-event {
-    width: 100vw;
-    
-    padding: 20px;
-    background-color: #fff;
+    width: 100vw; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-color: #f5dcc5; 
     color: #000;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow-x: hidden; 
+    overflow-y: auto;
 }
 
 .create-event h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
 }
 
 .create-event form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    max-width: 600px;
+    min-height: 60vh; 
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .create-event form div {
     margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
 }
 
 .create-event label {
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: block;
+    font-size: 20px;
 }
 
 .create-event input[type="text"],
+.create-event input[type="datetime-local"],
+.create-event input[type="datetime"],
+.create-event input[type="time"],
+.create-event input[type="date"],
 textarea {
-    width: 95%;
-    padding: 1rem;
+    width: 100%;
+    padding: 0.7rem; 
+    font-size: 20px; 
     border: 2px solid #38f308;
     border-radius: 6px;
     background-color: #fff;
     color: #000;
+    box-sizing: border-box;
 }
 
 .create-event textarea {
     resize: vertical;
-    height: 5rem;
+    height: 3.5rem; 
+}
+
+.create-event input[type="file"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 22px; 
+    border: 2px solid #38f308;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #000;
+    box-sizing: border-box;
 }
 
 .create-event button {
     background-color: salmon;
     color: white;
-    padding: 10px 15px;
+    padding: 15px 25px; 
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.5s ease-in;
+    width: 60%;
+    margin-top: 10px;
+    font-size: 22px;
 }
 
 .create-event button:hover {
@@ -58,5 +100,28 @@ textarea {
 
 .create-event span {
     color: orangered;
-    font-size: 12px;
+    font-size: 16px;
+}
+
+.create-event .venue-image {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+}
+
+.create-event .formatted-date {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
